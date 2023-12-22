@@ -1,4 +1,4 @@
-# Resumen de conexiones _hardware_ correspondiente a diversos dispositivos de la maraca Sonoff
+# Resumen de conexiones _hardware_ correspondiente a diversos dispositivos de la marca Sonoff
 
 <details>
 
