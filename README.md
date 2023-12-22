@@ -12,3 +12,4 @@ Desde el [Github](https://github.com/RavenSystem/esp-homekit-devices/wiki/Instal
 
 - En la carpeta [/docs](https://github.com/OxDAbit/Hello-HAA/tree/main/docs) se encuentran todas las documentaciones que iré generando conforme vaya realizando proyectos con haa junto con un documento README que presentará el contenido actualizado de la misma.
 - En la carpeta [/melphaa](https://github.com/OxDAbit/Hello-HAA/tree/main/melphaa) se encuetran los _scripts_ que he ido utilizando para configurar diversos dispositivos.
+- En la carpeta [/src](https://github.com/OxDAbit/Hello-HAA/tree/main/src) se almacena código relacionado con alguna de las guías o proyectos
