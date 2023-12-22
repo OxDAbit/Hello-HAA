@@ -1,23 +1,28 @@
-# _Flash_ Sonoff devices
+# _Flasheo_ de dispositivos con `haa`
 
-A continuación se detellan los pasos a seguir para poder _flashear_ los dispositivos de la marca *Sonoff*
+A continuación se detallan los pasos a seguir para poder _flashear_ cualquier dispositivo con el _firmware_ `haa`
 
 ## Pasos previos
 
-1. Instalar `esptool` desde su carpeta mediante la ejecución del comando:
+1. Descargar la herramienta `esptool` desde sus repositorio de [Github](https://github.com/espressif/esptool)
+
+    > [!NOTE]
+    > Se adjunta [guía de instalación](https://github.com/RavenSystem/esp-homekit-devices/wiki/install-esptool-on-macos) de [RavenSystem](https://github.com/RavenSystem)
+
+2. Instalar `esptool` desde su carpeta mediante la ejecución del comando:
 
     ```python
     python3 setup.py install
     ```
 
-2. Descargar `fullhaaboot.bin` (página de [descarga](https://github.com/RavenSystem/haa/releases/latest/download/fullhaaboot.bin))
-3. Conectar RS-232 al Sonoff Basic
+3. Descargar `fullhaaboot.bin` (página de [descarga](https://github.com/RavenSystem/haa/releases/latest/download/fullhaaboot.bin))
+4. Conectar el dispositivo vía RS-232 al ordenador
 
     :warning:  **NOTE**: Los pines RX y TX van cruzados con la PCB FTDI custom :warning:
 
 ## _Flasheo_ del dispositivo
 
-1. Mantener pulsado el botón del Sonoff y conectar el conversor **RS-232**
+1. Mantener pulsado el botón del dispositivo y conectar el conversor **RS-232**
 2. Creamos un _script_ en `python` con el nombre `usb_detect.py` y que contenga la información abajo detallada. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
 
     ```python
@@ -31,7 +36,7 @@ A continuación se detellan los pasos a seguir para poder _flashear_ los disposi
     python usb_detect.py
     ```
 
-4. Creamos un _backup_ del _firmware_ original del Sonoff Basic desde el terminal:
+4. Creamos un _backup_ del _firmware_ original del dispositivo desde el terminal:
 
     ```bash
     esptool.py -p /dev/tty.usbserial-144240 read_flash 0x00000 0x100000 fwbackup.bin
@@ -121,24 +126,4 @@ A continuación se detellan los pasos a seguir para poder _flashear_ los disposi
 12. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
 13. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
     Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
-
-## Configuración
-
-1. Conectamos nuestro ordenador a la red creada por el dispositivo
-2. Mediante el uso de un navegador, accedemos a la _url_ `192.168.4.1:4567` correspondiente a la dirección IP por defecto de todos los dispositivos _flasheados_ con `haa`
-3. Seleccionamos nuestra red WiFi e insertamos nuestras credenciales
-
-    ![sonoff-config](images/../../images/haa-config-wifi.png)
-
-4. Seleccionamos la opción de conexión a internet que deseemos, para este ejemplo he utilziado la configuración de _roaming_ activo
-5. Configuramos el _script_ de funcionamiento `melphaa` del dispositivo
-
-    ![sonoff-melphaa](images/../../images/haa-config-melphaa.png)
-
-6. Posteriormente, guardamos la configuración mediante el botón **save**
-7. En este momento el dispositivo se reiniciará y comprobará si se encuentra en la última versión, en caso contrario se descargará los archivos desde el Github del proyecto
-8. Para poder ver los pasos que va ejecutando el dispositivo podemos abrir un terminal y lanzar el comando `nc -kulnw0 45678` el cual nos mostrará los _logs_ del dispositivo en red
-
-    ![sonoff-update](images/../../images/haa-end-update.png)
-
-
+14. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
