@@ -6,8 +6,8 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
 
 1. Descargar la herramienta `esptool` desde sus repositorio de [Github](https://github.com/espressif/esptool)
 
-    > [!NOTE]
-    > Se adjunta [guía de instalación](https://github.com/RavenSystem/esp-homekit-devices/wiki/install-esptool-on-macos) de [RavenSystem](https://github.com/RavenSystem)
+> [!NOTE]
+> Se adjunta [guía de instalación](https://github.com/RavenSystem/esp-homekit-devices/wiki/install-esptool-on-macos) de [RavenSystem](https://github.com/RavenSystem)
 
 2. Instalar `esptool` desde su carpeta mediante la ejecución del comando:
 
@@ -16,27 +16,27 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     ```
 
 3. Descargar `fullhaaboot.bin` (página de [descarga](https://github.com/RavenSystem/haa/releases/latest/download/fullhaaboot.bin))
-4. Conectar el dispositivo vía RS-232 al ordenador
-
-    :warning:  **NOTE**: Los pines RX y TX van cruzados con la PCB FTDI custom :warning:
-
-## _Flasheo_ del dispositivo
-
-1. Mantener pulsado el botón del dispositivo y conectar el conversor **RS-232**
-2. Creamos un _script_ en `python` con el nombre `usb_detect.py` y que contenga la información abajo detallada. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
+4. Crear un _script_ en `python`, o descargarlo del [repositorio](https://github.com/OxDAbit/Hello-HAA/blob/main/src/detect_usb.py), con el nombre `usb_detect.py` (por ejemplo) y que contenga la información abajo detallada. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
 
     ```python
     import glob
     print(glob.glob('/dev/tty.*'))
     ```
 
-3. Localizar el puerto serie al que esta conectado el dispositivo mediante el _script_:
+5. Conectar el dispositivo vía RS-232 al ordenador
+
+    :warning:  **NOTE**: Los pines RX y TX van cruzados con la PCB FTDI custom :warning:
+
+## _Flasheo_ del dispositivo
+
+1. Mantener pulsado el botón del dispositivo y conectar el conversor **RS-232**
+2. Localizar el puerto serie al que esta conectado el dispositivo mediante el _script_:
 
     ```bash
     python usb_detect.py
     ```
 
-4. Creamos un _backup_ del _firmware_ original del dispositivo desde el terminal:
+3. Creamos un _backup_ del _firmware_ original del dispositivo desde el terminal:
 
     ```bash
     esptool.py -p /dev/tty.usbserial-144240 read_flash 0x00000 0x100000 fwbackup.bin
@@ -64,9 +64,9 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
-5. Quitamos la alimentación del dispositivo
-6. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-7. Borramos el _firmware_ del dispositivo:
+4. Quitamos la alimentación del dispositivo
+5. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+6. Borramos el _firmware_ del dispositivo:
 
     ```bash
     esptool.py -p /dev/tty.usbserial-144240 erase_flash
@@ -91,9 +91,9 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
-8. Quitamos la alimentación del dispositivo
-9. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-10. Subimos el _firmware_ del HAA ejecutando el comando adjunto desde la carpeta dónde tenemos ubicado el archivo `fullhaaboot.bin`
+7. Quitamos la alimentación del dispositivo
+8. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+9.  Subimos el _firmware_ del HAA ejecutando el comando adjunto desde la carpeta dónde tenemos ubicado el archivo `fullhaaboot.bin`
 
     ```bash
     esptool.py -p /dev/tty.usbserial-144240 --baud 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 fullhaaboot.bin
@@ -122,8 +122,8 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
-11. Quitamos la alimentación del dispositivo
-12. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-13. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
+10. Quitamos la alimentación del dispositivo
+11. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+12. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
     Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
-14. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
+13. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
