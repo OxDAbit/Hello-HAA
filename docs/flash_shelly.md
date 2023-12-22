@@ -66,7 +66,8 @@
 
     Tras aceptar la configuración, el dispositivo se reiniciará y reconectará automáticamente.
 
-    ⚠️ **NOTA**: *Este paso es muy importante y crítico. De no realizarlo correctamente el dispositivo se puede quedar bloqueado y se requiere del flasheo vía hardware*
+> [!WARNING]
+> Este paso es muy importante y crítico. De no realizarlo correctamente el dispositivo se puede quedar bloqueado y se requiere del flasheo vía hardware
 
 14. En este punto del proceso de _flasheo_ abandonamos el Github de Tasmosta y proseguimos con la explicación del Github de HAA.
 15. Antes de conectarnos al dispositivo para seguir con la instalación, se debe acceder al _link_ de [***releases***](https://github.com/RavenSystem/haa/releases/tag/12.9.1) del Github de HAA y descargar los 2 archivos necesarios para configurar el dispositivo `haaboot_esp32...bin` y `otamain_esp32...bin`
@@ -83,4 +84,4 @@
 > [!NOTE]
 > Existe la posibilidad que este paso no funcione correctamente. Si tras el reinicio vuelve aparecer el menú de `Tasmosta` y por ende no se genera la red WiFi HAA, se deberá repetir el paso anterior (paso 16) pero esta vez actualizando el dispositivo mediante el uso del archivo* `otamain_esp32_1.bin`
 
-18. Y listo! El dispositivo está **flasheado** vía OTA con `haa` y ya se puede configurar como cualquier otro dispositivo
+18. Llegados a este punto, el dispositivo ya está _flasheado_ vía OTA con `haa` y se puede iniciar la configuración tal y como se detalla en la guía [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
