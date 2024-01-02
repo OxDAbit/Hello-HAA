@@ -19,6 +19,6 @@
 
 > [!TIP]
 > Para usuarios de `linux` y `mac OS`, se puede configurar el archivo `bash_profile` para crear un alias de este comando, de esta forma se simplifica y poniendo únicmante el comando `haa` en el terminal éste ya estaría en ejecución
-> ![bash_profile.png](https://github.com/OxDAbit/Hello-HAA/blob/main/images/bash_profile.png)
+> ![bash_profile.png](../images/bash_profile.png)
 
-9. Por último, se vinculará el dispositivo en la aplicación casa tal y como se detalla en el documento [homekit_connection.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/homekit_connection.md)
+1. Por último, se vinculará el dispositivo en la aplicación casa tal y como se detalla en el documento [homekit_connection.md](../docs/homekit_connection.md)

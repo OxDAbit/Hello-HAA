@@ -12,7 +12,7 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     python3 -m pip install esptool
     ```
 
-3. Crear un _script_ en `python`, o descargarlo del [repositorio](https://github.com/OxDAbit/Hello-HAA/blob/main/src/detect_usb.py), con el nombre que queramos (Ex: `usb_detect.py`) y que contenga el código adjunto a continuación. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
+3. Crear un _script_ en `python`, o descargarlo del [repositorio](../src/detect_usb.py), con el nombre que queramos (Ex: `usb_detect.py`) y que contenga el código adjunto a continuación. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
 
     ```python
     import glob
@@ -136,4 +136,4 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
 7. Quitamos la alimentación del dispositivo
 8. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
    Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
-9. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
+9. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](../docs/config_haa.md)

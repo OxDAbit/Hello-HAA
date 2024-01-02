@@ -4,7 +4,7 @@
 
 <summary>Sonoff Basic</summary>
 
-![Sonoff Basic](https://github.com/OxDAbit/Hello-HAA/blob/main/images/pinout-sonoff-basic.png)
+![Sonoff Basic](../images/pinout-sonoff-basic.png)
 
 </details>
 <details>
@@ -18,7 +18,7 @@
 |RX|RX|
 |TX|TX|
 
-![Sonoff Mini R2](https://github.com/OxDAbit/Hello-HAA/blob/main/images/pinout-sonoff-mini-r2.png)
+![Sonoff Mini R2](../images/pinout-sonoff-mini-r2.png)
 
 </details>
 <details>
@@ -32,6 +32,6 @@
 |RX|TX|
 |TX|RX|
 
-![Sonoff Mini R2](https://github.com/OxDAbit/Hello-HAA/blob/main/images/pinout-sonoff-basic-r4.png)
+![Sonoff Mini R2](../images/pinout-sonoff-basic-r4.png)
 
 </details>

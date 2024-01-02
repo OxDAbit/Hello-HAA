@@ -5,5 +5,5 @@
 
 |Dispositivo|Función|Archivo|
 | --------- | ----- | ----- |
-|Sonoff mini R2|Interruptor con circuito conmutado|[sonoff-mini-r2-conmutador.json](https://github.com/OxDAbit/Hello-HAA/blob/main/melphaa/sonoff-mini-r2-conmutador.md)|
-|Shelly Plus 2PM|Apertura y cierre de persiana|[sheely-plus-2PM-persiana.json](https://github.com/OxDAbit/Hello-HAA/blob/main/melphaa/sheely-plus-2PM-persiana.md)|
+|Sonoff mini R2|Interruptor con circuito conmutado|[sonoff-mini-r2-conmutador.json](/melphaa/sonoff-mini-r2-conmutador.md)|
+|Shelly Plus 2PM|Apertura y cierre de persiana|[sheely-plus-2PM-persiana.json](/melphaa/sheely-plus-2PM-persiana.md)|
