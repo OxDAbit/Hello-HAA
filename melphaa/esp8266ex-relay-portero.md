@@ -3,12 +3,12 @@
 ## Apertura de puerta desde el interfono
 
 `MEPLHAA` está diseñado para gestionar la PCB detallada en el [ESP8266EX Wi-Fi 10A DC 7-30V](../docs/esp_relay_pinout.md)
-Se mantiene abierta la puerta todo el rato que esté activo el pulsador del interfono y mantendrá abierta la puerta durante 3 segundos si se activa desde Homekit
+Se mantiene abierta la puerta todo el rato que esté activo el pulsador del interfono y mantendrá abierta la puerta durante 4 segundos si se activa desde Homekit
 
 ### `Melphaa` _script_ para configurar al dispositivo
 
 ```json
-{"c":{"io":[[[4],2],[[0],6,1]],"l":13,"n":"portero"},"a":[{"0":{"r":[[4,1,4]]},"1":{"r":[[4]]},"t":4,"i":4,"b":[[0,1],[0,0]],"s":0}]}
+{"c":{"io":[[[4],2],[[0],6,1]],"l":13,"n":"portero"},"a":[{"0":{"r":[[4,1,4]]},"1":{"r":[[4]]},"t":4,"i":4,"b":[[0,1],[0,0]],"s":1}]}
 ```
 
 ### Descripción del script
@@ -37,7 +37,7 @@ Se mantiene abierta la puerta todo el rato que esté activo el pulsador del inte
         [0,1],                // Primer botón conectado al GPIO 0 como "pulsación simple"
         [0,0]                 // Segundo botón conectado al GPIO 0 como "pulsación simple" invertida (valor opuesto al tipo 1)
       ],
-      "s": 0                  // Estado inicial apagado
+      "s": 1                  // Estado inicial bloqueado
     }
   ]
 }
