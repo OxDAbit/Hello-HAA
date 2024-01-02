@@ -2,7 +2,7 @@
 
 ## Control del relé integrado en la PCB
 
-Este `MEPLHAA` está diseñado para gestionar la PCB detallada en el [esp_relay_pinout.md](../docs/esp_relay_pinout.md#pinout-pcb-custom-con-esp)
+`MEPLHAA` está diseñado para gestionar la PCB detallada en el [esp_relay_pinout.md](../docs/esp_relay_pinout.md#esp8266mod-esp8266-ex)
 Se activa y desactiva relé tanto desde el interruptor (Jumper P3 de la PCB) como desde Homekit
 
 ### `Melphaa` _script_ para configurar al dispositivo
