@@ -2,6 +2,8 @@
 
 ## Control del relé integrado en la PCB
 
+Se activa y desactiva relé tanto desde el interruptor (Jumper P3 de la PCB) como desde Homekit
+
 ### `Melphaa` _script_ para configurar al dispositivo
 
 ```json

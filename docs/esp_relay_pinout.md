@@ -18,7 +18,7 @@ Pinout:
 |TX|P6 TX||
 |RX|P6 RX||
 |GPIO 5|GND||
-|GPIO 0|P3 01|Jumper para activar boot mode|
+|GPIO 0|P3 01|Jumper para activar boot mode e interruptor|
 |GPIO 15|GND||
 |GPIO 4|Relay||
 

@@ -21,3 +21,17 @@
 ![Sonoff Mini R2](https://github.com/OxDAbit/Hello-HAA/blob/main/images/pinout-sonoff-mini-r2.png)
 
 </details>
+<details>
+
+<summary>Sonoff Basic R4</summary>
+
+|Sonoff Basic R4|USB RS-232|
+| ------------ | -------- |
+|+3.3V|+3.3V|
+|GND|GND|
+|RX|TX|
+|TX|RX|
+
+![Sonoff Mini R2](https://github.com/OxDAbit/Hello-HAA/blob/main/images/pinout-sonoff-basic-r4.png)
+
+</details>
