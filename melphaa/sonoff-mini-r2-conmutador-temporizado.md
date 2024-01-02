@@ -24,7 +24,7 @@ El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe 
     "b": [[0, 5]]             // Se selecciona el GPIO 0 para activar el modo setup tras mantener pulsado el botón 8 segundos (opción 5)
   },
   "a": [
-    {
+    {                         // Como no se espifica la variable "t" (tipo de servicio), se configura como un accesorio del tipo switch (valor por defecto)
       "0": {                  // Configuración acción cuando el switch de Homekit está a OFF
         "r": [[12]]           // Se cambia el estado a OFF del relé conectado a la GPIO 12 hasta que vuelva a activarse
       },

@@ -8,7 +8,7 @@ Se mantiene abierta la puerta todo el rato que esté activo el pulsador del inte
 ### `Melphaa` _script_ para configurar al dispositivo
 
 ```json
-{"c":{"io":[[[4],2],[[0],6,1]],"l":13,"n":"portero"},"a":[{"0":{"r":[[4,1,3]]},"1":{"r":[[4]]},"t":4,"i":4,"b":[{"g":0},{"g":0,"t":0}],"s":0}]}
+{"c":{"io":[[[4],2],[[0],6,1]],"l":13,"n":"portero"},"a":[{"0":{"r":[[4,1,4]]},"1":{"r":[[4]]},"t":4,"i":4,"b":[[0,1],[0,0]],"s":0}]}
 ```
 
 ### Descripción del script
@@ -28,14 +28,14 @@ Se mantiene abierta la puerta todo el rato que esté activo el pulsador del inte
       "t": 4,                 // Servicio del tipo "Mecanismo de Bloqueo"
       "i": 4,                 // Tiempo de espera antes de devolver el mecanismo a su estado anterior en Homekit
       "0": {                  // Configuración acción cuando el switch de Homekit está a OFF
-        "r": [[4, 1, 3]]      // Se cambia el estado a ON del relé conectado a la GPIO 4 con una duración de 3 segundos
+        "r": [[4, 1, 4]]      // Se cambia el estado a ON del relé conectado a la GPIO 4 con una duración de 4 segundos
       },
       "1": {                  // Configuración acción cuando el switch de Homekit está a ON
         "r": [[4]]            // Se cambia el estado a OFF del relé conectado a la GPIO 4 hasta que vuelva a activarse
       },
       "b": [                  // Configuración de los botones, el cual debe ser una array
-        { "g": 0 },
-        { "g": 0, "t": 0 }
+        [0,1],                // Primer botón conectado al GPIO 0 como "pulsación simple"
+        [0,0]                 // Segundo botón conectado al GPIO 0 como "pulsación simple" invertida (valor opuesto al tipo 1)
       ],
       "s": 0                  // Estado inicial apagado
     }
