@@ -26,10 +26,10 @@ El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe 
   "a": [
     {
       "0": {                  // Configuración acción cuando el switch de Homekit está a OFF
-        "r": [[12]]           // Relé conectado a la GPIO 12 con estado "0" (el valor por defecto, al no estar especificado es 0.)
+        "r": [[12]]           // Se cambia el estado a OFF del relé conectado a la GPIO 12
       },
       "1": {                  // Configuración acción cuando el switch de Homekit está a ON
-        "r": [[12, 1]]        // Relé conectado a la GPIO 12 con estado "1" (el valor por defecto, al no estar especificado es 0.)
+        "r": [[12, 1]]        // Se cambia el estado a ON del relé conectado a la GPIO 12
       },
       "b": [                  // Configuración de los botones, el cual debe ser una array
         [0],                  // Primer botón conectado al GPIO 0 como "pulsación simple" (valor por defecto al no estar especificado)

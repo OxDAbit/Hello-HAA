@@ -2,6 +2,7 @@
 
 ## Control del relé integrado en la PCB
 
+Este `MEPLHAA` está diseñado para gestionar la PCB detallada en el [esp_relay_pinout.md](../docs/esp_relay_pinout.md#pinout-pcb-custom-con-esp)
 Se activa y desactiva relé tanto desde el interruptor (Jumper P3 de la PCB) como desde Homekit
 
 ### `Melphaa` _script_ para configurar al dispositivo
@@ -26,10 +27,10 @@ Se activa y desactiva relé tanto desde el interruptor (Jumper P3 de la PCB) com
   "a": [
     {
       "0": {                  // Configuración acción cuando el switch de Homekit está a OFF
-        "r": [[4]]            // Relé conectado a la GPIO 12 con estado "0" (el valor por defecto, al no estar especificado es 0.)
+        "r": [[4]]            // Se cambia el estado a OFF del relé conectado a la GPIO 4 hasta que vuelva a activarse
       },
       "1": {                  // Configuración acción cuando el switch de Homekit está a ON
-        "r": [[4, 1]]         //  Relé conectado a la GPIO 12 con estado "1" (el valor por defecto, al no estar especificado es 0.)
+        "r": [[4, 1]]         // Se cambia el estado a ON del relé conectado a la GPIO 4
       },
       "b": [                  // Configuración de los botones, el cual debe ser una array
         [0]                   // Primer botón conectado al GPIO 0 como "pulsación simple" (valor por defecto al no estar especificado)
