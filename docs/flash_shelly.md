@@ -70,7 +70,7 @@
 > Este paso es muy importante y crítico. De no realizarlo correctamente el dispositivo se puede quedar bloqueado y se requiere del flasheo vía hardware
 
 14. En este punto del proceso de _flasheo_ abandonamos el Github de Tasmosta y proseguimos con la explicación del Github de HAA.
-15. Antes de conectarnos al dispositivo para seguir con la instalación, se debe acceder al _link_ de [***releases***](https://github.com/RavenSystem/haa/releases/tag/12.9.1) del Github de HAA y descargar los 2 archivos necesarios para configurar el dispositivo `haaboot_esp32...bin` y `otamain_esp32...bin`
+15. Antes de conectarnos al dispositivo para seguir con la instalación, se debe acceder al _link_ de [***releases***](https://github.com/RavenSystem/haa/releases) del Github de HAA y descargar los 2 archivos necesarios para configurar el dispositivo `haaboot_esp32...bin` y `otamain_esp32...bin`
     - Para los dispositivos _Shelly_ **Mini** se deben seleccionar los archivos con el sufijo `c3`
     - Para los dispositivos _Shelly_ Plus y Pro se deben seleccionar los archivos con el sufijo `_1`
 

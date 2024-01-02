@@ -4,28 +4,53 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
 
 ## Pasos previos
 
-1. Descargar la herramienta `esptool` desde sus repositorio de [Github](https://github.com/espressif/esptool)
+1. Descargar e instalar `python` en su versión más actual (en el momento de redactar este _paper_ está en la v3.11) desde la página web oficial [Python](https://www.python.org/downloads/)
+2. Instalar el módulo `esptool` [Github](https://github.com/espressif/esptool)
 
-> [!NOTE]
-> Se adjunta [guía de instalación](https://github.com/RavenSystem/esp-homekit-devices/wiki/install-esptool-on-macos) de [RavenSystem](https://github.com/RavenSystem)
-
-2. Instalar `esptool` desde su carpeta mediante la ejecución del comando:
-
-    ```python
-    python3 setup.py install
+    ``` bash
+    python3 -m pip install --upgrade pip
+    python3 -m pip install esptool
     ```
 
-3. Descargar `fullhaaboot.bin` (página de [descarga](https://github.com/RavenSystem/haa/releases/latest/download/fullhaaboot.bin))
-4. Crear un _script_ en `python`, o descargarlo del [repositorio](https://github.com/OxDAbit/Hello-HAA/blob/main/src/detect_usb.py), con el nombre `usb_detect.py` (por ejemplo) y que contenga la información abajo detallada. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
+3. Crear un _script_ en `python`, o descargarlo del [repositorio](https://github.com/OxDAbit/Hello-HAA/blob/main/src/detect_usb.py), con el nombre que queramos (Ex: `usb_detect.py`) y que contenga el código adjunto a continuación. Este _script_ nos servirá en los próximos pasos para detectar el puerto USB al que se conecta el dispositivo:
 
     ```python
     import glob
     print(glob.glob('/dev/tty.*'))
     ```
 
-5. Conectar el dispositivo vía RS-232 al ordenador
+4. Conectar el dispositivo vía RS-232 al ordenador
+5. Identificar el _chip_ qué queremos _flashear_ para conocer el modelo en concreto mediante el comando:
 
-    :warning:  **NOTE**: Los pines RX y TX van cruzados con la PCB FTDI custom :warning:
+    ``` bash
+    python3 -m esptool flash_id
+    ```
+
+    Tras la ejecución del comando, se obtendrá una información como la detallada a continuación, la cual nos servirá para saber que archvivos descargar y qué comandos utilizar para poder _flashear_ el dispositivo (El tipo de dispositivo viene detallado en la línea `Chip is ESP...`):
+
+    ``` bash
+    esptool.py v4.7.0
+    Found 4 serial ports
+    Serial port /dev/cu.usbserial-144240
+    Connecting...
+    Detecting chip type... Unsupported detection protocol, switching and trying again...
+    Connecting...
+    Detecting chip type... ESP8266
+    Chip is ESP8266EX
+    Features: WiFi
+    Crystal is 26MHz
+    MAC: c8:c9:a3:2f:a8:f8
+    Stub is already running. No upload is necessary.
+    Manufacturer: 5e
+    Device: 4016
+    Detected flash size: 4MB
+    Hard resetting via RTS pin...
+    ```
+
+> [!TIP]
+> Para el _flasheo_ de los Chips ESP8266EX me he encontrado con problemas de voltaje. No se muestra ningún error tras finalizar el proceso de grabacón del _firmware_ pero una vez finalizado, no inicia el dispositivo y por ende no genera el AP para proseguir con el proceso de configuración.
+
+6. Descargar `fullhaaboot.bin` (página de [descarga](https://github.com/RavenSystem/haa/releases/latest/download/fullhaaboot.bin))
 
 ## _Flasheo_ del dispositivo
 
@@ -39,10 +64,11 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
 3. Creamos un _backup_ del _firmware_ original del dispositivo desde el terminal:
 
     ```bash
-    esptool.py -p /dev/tty.usbserial-144240 read_flash 0x00000 0x100000 fwbackup.bin
+    python3 -m esptool -p <puerto USB dispositivo> read_flash 0x00000 0x100000 <Nombre del archivo _backup_>
     ```
 
-    :warning: **NOTE**: Si aparece una excepción al ejecutar el comando, añadir `python3` delante del comando `esptool` :warning:
+> [!TIP]
+> Si aparece una excepción al ejecutar el comando, añadir `python3` delante del comando `esptool`
 
     Resultado mostrado tras la ejecución del comando:
 
@@ -64,12 +90,12 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
-4. Quitamos la alimentación del dispositivo
-5. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-6. Borramos el _firmware_ del dispositivo:
+1. Quitamos la alimentación del dispositivo
+2. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+3. Borramos el _firmware_ del dispositivo:
 
     ```bash
-    esptool.py -p /dev/tty.usbserial-144240 erase_flash
+    python3 -m esptool -p <puerto USB dispositivo> erase_flash
     ```
 
     Resultado mostrado tras la ejecución del comando:
@@ -91,39 +117,23 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
+4. Quitamos la alimentación del dispositivo
+5. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+6. Subimos el _firmware_ del HAA ejecutando el comando adjunto desde la carpeta dónde tenemos ubicado el archivo `fullhaaboot.bin`
+
+    - Comando para los ESP8266
+
+    ```bash
+    python3 -m esptool -p <puerto USB dispositivo> -b 115200 --before=default_reset --after=hard_reset write_flash -fs 1MB -fm dout 0x0 <Archivo HAA para _flasear>
+    ```
+
+    - Comando para el _flasheo_ de ESP32, ESP32-C y ESP32-S
+
+    ``` bash
+    python3 -m esptool -p <puerto USB dispositivo> -b 460800 --before=default_reset --after=hard_reset write_flash -fs 2MB -fm dio 0x0 <Archivo HAA para _flasear>
+    ```
+
 7. Quitamos la alimentación del dispositivo
-8. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-9.  Subimos el _firmware_ del HAA ejecutando el comando adjunto desde la carpeta dónde tenemos ubicado el archivo `fullhaaboot.bin`
-
-    ```bash
-    esptool.py -p /dev/tty.usbserial-144240 --baud 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 fullhaaboot.bin
-    ```
-
-    Resultado mostrado tras la ejecución del comando:
-
-    ```bash
-    esptool.py v2.8
-    Serial port /dev/tty.usbserial-143240
-    Connecting....
-    Detecting chip type... ESP8266
-    Chip is ESP8285
-    Features: WiFi, Embedded Flash
-    Crystal is 26MHz
-    MAC: 24:a1:60:10:0e:79
-    Uploading stub...
-    Running stub...
-    Stub running...
-    Configuring flash size...
-    Compressed 607712 bytes to 434475...
-    Wrote 607712 bytes (434475 compressed) at 0x00000000 in 42.1 seconds (effective 115.6 kbit/s)...
-    Hash of data verified.
-
-    Leaving...
-    Hard resetting via RTS pin...
-    ```
-
-10. Quitamos la alimentación del dispositivo
-11. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-12. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
-    Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
-13. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
+8. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
+   Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
+9. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](https://github.com/OxDAbit/Hello-HAA/blob/main/docs/config_haa.md)
