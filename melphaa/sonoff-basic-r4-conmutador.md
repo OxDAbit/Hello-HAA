@@ -1,6 +1,6 @@
 # Sonoff Basic R4
 
-![basic-r4](https://templates.blakadder.com/assets/device_images/sonoff_BASICR4.webp){width=450 height=350}
+![basic-r4](https://templates.blakadder.com/assets/device_images/sonoff_BASICR4.webp =450x350)
 
 ## Control de un Interruptor / Bombilla / Enchufe
 
