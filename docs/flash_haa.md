@@ -23,7 +23,7 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
 5. Identificar el _chip_ qué queremos _flashear_ para conocer el modelo en concreto mediante el comando:
 
     ``` bash
-    python3 -m esptool flash_id
+    python3 -m esptool -p <puerto USB dispositivo> flash_id
     ```
 
     Tras la ejecución del comando, se obtendrá una información como la detallada a continuación, la cual nos servirá para saber que archvivos descargar y qué comandos utilizar para poder _flashear_ el dispositivo (El tipo de dispositivo viene detallado en la línea `Chip is ESP...`):
@@ -55,13 +55,7 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
 ## _Flasheo_ del dispositivo
 
 1. Mantener pulsado el botón del dispositivo y conectar el conversor **RS-232**
-2. Localizar el puerto serie al que esta conectado el dispositivo mediante el _script_:
-
-    ```bash
-    python usb_detect.py
-    ```
-
-3. Creamos un _backup_ del _firmware_ original del dispositivo desde el terminal:
+2. Creamos un _backup_ del _firmware_ original del dispositivo desde el terminal:
 
     ```bash
     python3 -m esptool -p <puerto USB dispositivo> read_flash 0x00000 0x100000 <Nombre del archivo _backup_>

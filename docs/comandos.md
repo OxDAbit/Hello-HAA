@@ -20,21 +20,7 @@
     screen /dev/tty.usbserial-144240 115200
     ```
 
-3. Borrar _Flash_ de un dispositivo ESP
-
-    Comando:
-
-    ``` bash
-    python3 -m esptool -p <puerto USB dispositivo> erase_flash
-    ```
-
-    Comando de ejemplo:
-
-    ``` bash
-    python3 -m esptool -p /dev/tty.usbserial-144240 erase_flash
-    ```
-
-4. Realizar _backup_ de un dispositivo ESP
+3. Realizar _backup_ de un dispositivo ESP
 
     Comando:
 
@@ -46,6 +32,20 @@
 
     ``` bash
     python3 -m esptool -p /dev/tty.usbserial-144240 read_flash 0x00000 0x100000 fwbackup.bin
+    ```
+
+4. Borrar _Flash_ de un dispositivo ESP
+
+    Comando:
+
+    ``` bash
+    python3 -m esptool -p <puerto USB dispositivo> erase_flash
+    ```
+
+    Comando de ejemplo:
+
+    ``` bash
+    python3 -m esptool -p /dev/tty.usbserial-144240 erase_flash
     ```
 
 5. _Flashear_ ESP8266
@@ -61,6 +61,9 @@
     ``` bash
     python3 -m esptool -p /dev/tty.usbserial-144240 -b 115200 --before=default_reset --after=hard_reset write_flash -fs 1MB -fm dout 0x0 fullhaaboot.bin
     ```
+
+    > [!TIP]
+    > Para el _flasheo_ de los Chips ESP8266EX me he encontrado con problemas de voltaje. No se muestra ningún error tras finalizar el proceso de grabacón del _firmware_ pero una vez finalizado, no inicia el dispositivo y por ende no genera el AP para proseguir con el proceso de configuración.
 
 6. _Flashear_ ESP32, ESP32-S y ESP32-C
 

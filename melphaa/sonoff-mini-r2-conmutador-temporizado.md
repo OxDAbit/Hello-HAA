@@ -1,5 +1,7 @@
 # Sonoff Mini R2
 
+![sonoff-mini-r2](../images/sonoff-mini-r2.png)
+
 ## Control de un Interruptor / Bombilla / Enchufe con encendido temporizado
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito con un sólo interruptor o con interruptores conmutados y con un temporizador de 30 segundos, transcurrido dicho tiempo, el estado del mecanismo cambiará su estado anterior.

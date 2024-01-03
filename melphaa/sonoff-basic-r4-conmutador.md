@@ -1,5 +1,7 @@
 # Sonoff Basic R4
 
+![basic-r4](https://templates.blakadder.com/assets/device_images/sonoff_BASICR4.webp)
+
 ## Control de un Interruptor / Bombilla / Enchufe
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito "Magic Switch" de Sonoff gestionando un unico interruptor.

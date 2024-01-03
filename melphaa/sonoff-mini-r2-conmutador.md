@@ -1,5 +1,7 @@
 # Sonoff Mini R2
 
+![sonoff-mini-r2](../images/sonoff-mini-r2.png)
+
 ## Control de un Interruptor / Bombilla / Enchufe
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito con un sólo interruptor o con interruptores conmutados.
@@ -40,5 +42,4 @@ El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe 
     }
   ]
 }
-
 ```
