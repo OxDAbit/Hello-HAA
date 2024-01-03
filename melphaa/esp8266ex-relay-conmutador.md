@@ -1,5 +1,7 @@
 # ESP8266EX Relay Board 10A DC 7-30V
 
+<img src="../images/esp8266ex_relay.png" alt="ESP8266EX-Relay" width="450"/>
+
 ## Control del relé integrado en la PCB
 
 `MEPLHAA` está diseñado para gestionar la PCB detallada en el [ESP8266EX Wi-Fi 10A DC 7-30V](../docs/esp_relay_pinout.md)

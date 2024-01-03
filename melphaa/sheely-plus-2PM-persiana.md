@@ -1,5 +1,7 @@
 # Shelly Plus 2 PM
 
+<img src="https://templates.blakadder.com/assets/device_images/shelly_plus_2PM.webp" alt="Shelly-plus-2pm" width="450"/>
+
 ## Subir y Bajar persianas exteriores
 
 ### `Melphaa` _script_ para subir al dispositivo

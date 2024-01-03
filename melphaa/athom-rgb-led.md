@@ -1,6 +1,6 @@
 # Athom RGB LED Controller
 
-![athom-rgb](../images/athom-rgb.png)
+<img src="https://templates.blakadder.com/assets/device_images/athom_LS5050C-TAS.webp" alt="Athom-RGB" width="450"/>
 
 ## Control de una tira led con conector RGB (Azul, Verde, Rojo, Negro)
 

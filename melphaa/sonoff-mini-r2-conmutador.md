@@ -1,6 +1,6 @@
 # Sonoff Mini R2
 
-![sonoff-mini-r2](../images/sonoff-mini-r2.png)
+<img src="https://templates.blakadder.com/assets/device_images/sonoff_MINIR2.webp" alt="Sonoff-Mini-R2" width="450"/>
 
 ## Control de un Interruptor / Bombilla / Enchufe
 
