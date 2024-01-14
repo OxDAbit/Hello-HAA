@@ -1,4 +1,4 @@
-# Sonoff Mini R2
+# Control luz en un circuito conmutado temporizado con Sonoff Mini R2
 
 <img src="https://templates.blakadder.com/assets/device_images/sonoff_MINIR2.webp" alt="Sonoff-Mini-R2" width="450"/>
 
@@ -6,13 +6,16 @@
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito con un sólo interruptor o con interruptores conmutados y con un temporizador de 30 segundos, transcurrido dicho tiempo, el estado del mecanismo cambiará su estado anterior.
 
+> [!NOTE]
+> Link [blakadder](https://templates.blakadder.com/sonoff_MINIR2.html)
+
 ### `Melphaa` _script_ para configurar al dispositivo
 
 ```json
 {"c":{"io":[[[12,13],2],[[0,4],6,1]],"l":13,"n":"device-hostname","b":[[0,5]]},"a":[{"0":{"r":[[12]]},"1":{"r":[[12,1]]},"b":[[0],[4],[4,0]],"s":0,"i":30}]}
 ```
 
-### Descripción del script
+### Descripción del _script_
 
 ```json
 {

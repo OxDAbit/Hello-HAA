@@ -62,8 +62,8 @@
     python3 -m esptool -p /dev/tty.usbserial-144240 -b 115200 --before=default_reset --after=hard_reset write_flash -fs 1MB -fm dout 0x0 fullhaaboot.bin
     ```
 
-    > [!TIP]
-    > Para el _flasheo_ de los Chips ESP8266EX me he encontrado con problemas de voltaje. No se muestra ningún error tras finalizar el proceso de grabacón del _firmware_ pero una vez finalizado, no inicia el dispositivo y por ende no genera el AP para proseguir con el proceso de configuración.
+> [!TIP]
+> Para el _flasheo_ de los Chips ESP8266EX me he encontrado con problemas de voltaje. No se muestra ningún error tras finalizar el proceso de grabacón del _firmware_ pero una vez finalizado, no inicia el dispositivo y por ende no genera el AP para proseguir con el proceso de configuración.
 
 6. _Flashear_ ESP32, ESP32-S y ESP32-C
 

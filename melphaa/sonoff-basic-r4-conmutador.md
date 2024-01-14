@@ -1,4 +1,4 @@
-# Sonoff Basic R4
+# Control luz en un circuito conmutado con Sonoff Basic R4
 
 <img src="https://templates.blakadder.com/assets/device_images/sonoff_BASICR4.webp" alt="Sonoff-Basic-R4" width="450"/>
 
@@ -6,13 +6,16 @@
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito "Magic Switch" de Sonoff gestionando un unico interruptor.
 
+> [!NOTE]
+> Link [blakadder](https://templates.blakadder.com/sonoff_BASICR4.html)
+
 ### `Melphaa` _script_ para configurar al dispositivo
 
 ```json
 {"c":{"io":[[[4,6],2],[[5],6,0,2,1,2000],[[9],6]],"l":6,"n":"device-hostname","b":[[9,5]]},"a":[{"0":{"r":[[4]]},"1":{"r":[[4,1]]},"b":[[5],[9]]}]}
 ```
 
-### Descripción del script
+### Descripción del _script_
 
 ```json
 {

@@ -1,4 +1,4 @@
-# ESP8266EX Relay Board 10A DC 7-30V
+# Portero con ESP8266EX Relay Board 10A DC 7-30V
 
 <img src="../images/esp8266ex_relay.png" alt="ESP8266EX-Relay" width="450"/>
 
@@ -13,7 +13,7 @@ Se mantiene abierta la puerta todo el rato que esté activo el pulsador del inte
 {"c":{"io":[[[4],2],[[0],6,1]],"l":13,"n":"portero"},"a":[{"0":{"r":[[4,1,4]]},"1":{"r":[[4]]},"t":4,"i":4,"b":[[0,1],[0,0]],"s":1}]}
 ```
 
-### Descripción del script
+### Descripción del _script_
 
 ```json
 {

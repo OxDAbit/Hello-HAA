@@ -6,7 +6,7 @@
 
 El _script_ adjunto se define para gestionar una tira led, tanto el encendido y apagado como el cambio de color de la misma.
 
-> [!INFO]
+> [!NOTE]
 > Link [blakadder](https://templates.blakadder.com/athom_LS5050C-TAS.html)
 
 ### `Melphaa` _script_ para configurar al dispositivo
@@ -15,7 +15,7 @@ El _script_ adjunto se define para gestionar una tira led, tanto el encendido y 
 {"c":{"io":[[[4,12,14],7],[[0],6,1]],"n":"device-hostname","b":[[0,5]],"q":500},"a":[{"t":30,"g":[12,4,14],"b":[[0]]}]}
 ```
 
-### Descripción del script
+### Descripción del _script_
 
 ```json
 {

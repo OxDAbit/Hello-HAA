@@ -127,7 +127,7 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     python3 -m esptool -p <puerto USB dispositivo> -b 460800 --before=default_reset --after=hard_reset write_flash -fs 2MB -fm dio 0x0 <Archivo HAA para _flasear>
     ```
 
-7. Quitamos la alimentación del dispositivo
+7. Quitamos la alimentación del dispositivo y volvemos a conectarlo
 8. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
    Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
 9. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](../docs/config_haa.md)

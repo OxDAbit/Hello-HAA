@@ -1,10 +1,10 @@
-# Resumen de conexiones _hardware_ correspondiente a diversos dispositivos de la marca Sonoff
+# Resumen de conexiones _hardware_ para el _flasheo_ de los dispositivos Sonoff
 
 <details>
 
 <summary>Sonoff Basic</summary>
 
-![Sonoff Basic](../images/pinout-sonoff-basic.png)
+<img src="../images/pinout-sonoff-basic.png" alt="Sonoff-Basic" width="450"/>
 
 </details>
 <details>
@@ -18,7 +18,7 @@
 |RX|RX|
 |TX|TX|
 
-![Sonoff Mini R2](../images/pinout-sonoff-mini-r2.png)
+<img src="../images/pinout-sonoff-mini-r2.png" alt="Sonoff-Mini-R2" width="450"/>
 
 </details>
 <details>
@@ -32,6 +32,6 @@
 |RX|TX|
 |TX|RX|
 
-![Sonoff Mini R2](../images/pinout-sonoff-basic-r4.png)
+<img src="../images/pinout-sonoff-basic-r4.png" alt="Sonoff-Basic-R4" width="450"/>
 
 </details>

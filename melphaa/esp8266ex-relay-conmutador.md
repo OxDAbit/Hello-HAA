@@ -1,4 +1,4 @@
-# ESP8266EX Relay Board 10A DC 7-30V
+# Gestión relé con ESP8266EX Relay Board 10A DC 7-30V
 
 <img src="../images/esp8266ex_relay.png" alt="ESP8266EX-Relay" width="450"/>
 
@@ -13,7 +13,7 @@ Se activa y desactiva relé tanto desde el interruptor (Jumper P3 de la PCB) com
 {"c": {"io": [[[4], 2],[[0], 6, 1]],"l": 13,"n": "device-hostname","b": [[0, 5]]},"a": [{"0": {"r": [[4]]},"1": {"r": [[4, 1]]},"b": [[0]],"s": 0}]}
 ```
 
-### Descripción del script
+### Descripción del _script_
 
 ```json
 {
