@@ -2,6 +2,10 @@
 
 <img src="https://templates.blakadder.com/assets/device_images/sonoff_MINIR2.webp" alt="Sonoff-Mini-R2" width="450"/>
 
+> [!NOTE]
+> El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [guía Sonoff](../docs/sonoff_pinout.md)
+> La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+
 ## Control de un Interruptor / Bombilla / Enchufe
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito con un sólo interruptor o con interruptores conmutados.

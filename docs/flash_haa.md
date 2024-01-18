@@ -61,9 +61,6 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     python3 -m esptool -p <puerto USB dispositivo> read_flash 0x00000 0x100000 <Nombre del archivo _backup_>
     ```
 
-> [!TIP]
-> Si aparece una excepción al ejecutar el comando, añadir `python3` delante del comando `esptool`
-
     Resultado mostrado tras la ejecución del comando:
 
     ```bash
@@ -84,9 +81,9 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
-1. Quitamos la alimentación del dispositivo
-2. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-3. Borramos el _firmware_ del dispositivo:
+3. Quitamos la alimentación del dispositivo
+4. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+5. Borramos el _firmware_ del dispositivo:
 
     ```bash
     python3 -m esptool -p <puerto USB dispositivo> erase_flash
@@ -111,9 +108,9 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     Hard resetting via RTS pin...
     ```
 
-4. Quitamos la alimentación del dispositivo
-5. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
-6. Subimos el _firmware_ del HAA ejecutando el comando adjunto desde la carpeta dónde tenemos ubicado el archivo `fullhaaboot.bin`
+6. Quitamos la alimentación del dispositivo
+7. Mantener pulsado el botón del dispositvo y volver a conectar la alimentación
+8. Subimos el _firmware_ del HAA ejecutando el comando adjunto desde la carpeta dónde tenemos ubicado el archivo `fullhaaboot.bin`
 
     - Comando para los ESP8266
 
@@ -127,7 +124,14 @@ A continuación se detallan los pasos a seguir para poder _flashear_ cualquier d
     python3 -m esptool -p <puerto USB dispositivo> -b 460800 --before=default_reset --after=hard_reset write_flash -fs 2MB -fm dio 0x0 <Archivo HAA para _flasear>
     ```
 
-7. Quitamos la alimentación del dispositivo y volvemos a conectarlo
-8. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
-   Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
-9. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](../docs/config_haa.md)
+9. Quitamos la alimentación del dispositivo y volvemos a conectarlo
+10. Tras el _flasheo_ y el reinicio del dispositivo, este arrancará generando un red WiFi con el prefijo **HAA-**.
+    Establecemos conexión WiFi con dicha red y accederemos a la dirección IP `192.168.4.1:4567`
+11. Una vez conectado a nuestra red WiFi, el dispositivo se conectará al Github oficial para comprobar si hay alguna versión más actual para descargar, en caso afirmativo la descargará e instalará.
+    Para leer los _logs_ del dispositvo dónde se indican los pasos que está realizando se puede ejecutar el comando adjunto:
+
+    ``` bash
+    nc -kulnw0 45678
+    ```
+
+12. Se prosigue con el proceso de configuración, detallado en el documento [config_haa.md](../docs/config_haa.md)

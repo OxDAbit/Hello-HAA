@@ -2,6 +2,10 @@
 
 <img src="../images/esp8266ex_relay.png" alt="ESP8266EX-Relay" width="450"/>
 
+> [!NOTE]
+> El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [Guía ESP](../docs/esp_relay_pinout.md)
+> La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+
 ## Apertura de puerta desde el interfono
 
 `MEPLHAA` está diseñado para gestionar la PCB detallada en el [ESP8266EX Wi-Fi 10A DC 7-30V](../docs/esp_relay_pinout.md)
