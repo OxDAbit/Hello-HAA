@@ -5,6 +5,7 @@
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [Guía ESP](../docs/esp_relay_pinout.md)
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+> Información del dispositivo [blakadder](https://templates.blakadder.com/HW-622.html)
 
 ## Control del relé integrado en la PCB
 

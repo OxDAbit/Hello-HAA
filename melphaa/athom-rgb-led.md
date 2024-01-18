@@ -4,14 +4,13 @@
 
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [Guía Athom](../docs/athom_pinout.md)
+>
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+> Información del dispositivo [blakadder](https://templates.blakadder.com/athom_LS5050C-TAS.html)
 
 ## Control de una tira led con conector RGB (Azul, Verde, Rojo, Negro)
 
 El _script_ adjunto se define para gestionar una tira led, tanto el encendido y apagado como el cambio de color de la misma.
-
-> [!NOTE]
-> Link [blakadder](https://templates.blakadder.com/athom_LS5050C-TAS.html)
 
 ### `Melphaa` _script_ para configurar al dispositivo
 

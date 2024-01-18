@@ -4,13 +4,11 @@
 
 > [!NOTE]
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+> Información del dispositivo [blakadder](https://templates.blakadder.com/ESP-01S-Relay-v5.html)
 
 ## Control de un relé
 
 El _script_ adjunto se define para gestionar el ESP01 como un activador de un relé el cual puede gestionar una bombilla, enchufe,...
-
-> [!NOTE]
-> Link [blakadder](https://templates.blakadder.com/ESP-01S-Relay-v5.html)
 
 ### `Melphaa` _script_ para configurar al dispositivo
 

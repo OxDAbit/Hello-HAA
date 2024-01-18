@@ -5,14 +5,11 @@
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [guía Shelly OTA](../docs/flash_ota_shelly.md)
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+> Información del dispositivo [blakadder](https://templates.blakadder.com/shelly_plus_2PM.html)
 
 ## Automatizar persianas exteriores
 
 El _script_ adjunto se define para gestionar la apertura y cierre de una persiana exterior con una configuración de 23 segundos de apertura y 20 segundos de cierre.
-
-> [!NOTE]
-> Link [blakadder](https://templates.blakadder.com/shelly_plus_2PM.html)
-
 
 ### `Melphaa` _script_ para subir al dispositivo
 

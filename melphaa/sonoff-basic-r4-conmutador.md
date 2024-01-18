@@ -5,13 +5,11 @@
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [guía Sonoff](../docs/sonoff_pinout.md)
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+> Información del dispositivo [blakadder](https://templates.blakadder.com/sonoff_BASICR4.html)
 
 ## Control de un Interruptor / Bombilla / Enchufe
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito "Magic Switch" de Sonoff gestionando un unico interruptor.
-
-> [!NOTE]
-> Link [blakadder](https://templates.blakadder.com/sonoff_BASICR4.html)
 
 ### `Melphaa` _script_ para configurar al dispositivo
 
