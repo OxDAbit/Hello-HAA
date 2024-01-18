@@ -4,7 +4,9 @@
 
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se encuentra definido en la [guía Sonoff](../docs/sonoff_pinout.md)
+>
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+>
 > Información del dispositivo [blakadder](https://templates.blakadder.com/sonoff_basic.html)
 
 ## Control de un Interruptor / Bombilla / Enchufe

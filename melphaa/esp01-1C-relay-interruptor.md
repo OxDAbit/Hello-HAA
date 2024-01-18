@@ -4,6 +4,7 @@
 
 > [!NOTE]
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+>
 > Información del dispositivo [blakadder](https://templates.blakadder.com/ESP-01S-Relay-v5.html)
 
 ## Control de un relé
