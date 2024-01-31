@@ -1,5 +1,10 @@
 # Automatización persianas mediante `Shelly PLUS 2PM`
 
+## Objetivo el proyecto
+
+El objetivo del proyecto es automatizar la apertura y cierre de las persianas exteriores tanto desde la aplicación de Homekit como desde los interruptores físicos.
+En mi caso, el proyecto se ha realizado con un interruptor de 3 posiciones (subida, bajada y paro)
+
 ## Pasos previos
 
 Calcular el tiempo de apertura y cierre de nuestra persiana, de forma exacta, mediante el uso de un cronómetro.
