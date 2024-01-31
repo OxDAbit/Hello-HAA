@@ -15,7 +15,7 @@ Para _flashear_ el dispositivo con el _firmware_ **HAA** se debe seguir la guía
 
 ## MELPHAA
 
-El `MELPHAA` utilizado para la confguración del dispositivo, así como su explicación, está documentado en [Melphaa ESP8266 Porter](../../melphaa/esp8266ex-relay-portero.md)
+El `MELPHAA` utilizado para la confguración del dispositivo, así como su explicación, está documentado en [Melphaa ESP8266 Portero](../../melphaa/esp8266ex-relay-portero.md)
 
 ## Montaje
 
