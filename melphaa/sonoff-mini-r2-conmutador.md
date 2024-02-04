@@ -13,9 +13,6 @@
 
 El _script_ adjunto se define para gestionar un interruptor, bombilla o enchufe en un circuito con un sólo interruptor o con interruptores conmutados.
 
-> [!NOTE]
-> Link [blakadder](https://templates.blakadder.com/sonoff_MINIR2.html)
-
 ### `Melphaa` _script_ para configurar al dispositivo
 
 ```json

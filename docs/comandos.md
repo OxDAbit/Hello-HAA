@@ -20,7 +20,13 @@
     screen /dev/tty.usbserial-144240 115200
     ```
 
-3. Realizar _backup_ de un dispositivo ESP
+3. Descargar, desde terminal, la última versión del binario `fullhaaboot.bin`
+
+    ```bash
+    curl -LOk https://github.com/RavenSystem/haa/releases/latest/download/fullhaaboot.bin
+    ```
+
+4. Realizar _backup_ de un dispositivo ESP
 
     Comando:
 
@@ -34,7 +40,7 @@
     python3 -m esptool -p /dev/tty.usbserial-144240 read_flash 0x00000 0x100000 fwbackup.bin
     ```
 
-4. Borrar _Flash_ de un dispositivo ESP
+5. Borrar _Flash_ de un dispositivo ESP
 
     Comando:
 
@@ -48,7 +54,7 @@
     python3 -m esptool -p /dev/tty.usbserial-144240 erase_flash
     ```
 
-5. _Flashear_ ESP8266
+6. _Flashear_ ESP8266
 
     Comando:
 
