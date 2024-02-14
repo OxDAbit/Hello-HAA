@@ -14,7 +14,7 @@
 El _script_ adjunto se define para gestionar un sensor de presencia humana.
 Para integrar el sensor con Homekit, se ha recurrido al uso de un Wemos mini D1, al cual se le ha conectado el pin de salida `out` del sensor **LD2410** al pin D2 (GPIO4)
 
-[Pinout LD2410](../images/ld2410.JPG)
+<img src="../images/ld2410.JPG" alt="LD2410 Pinout" width="450"/>
 
 ### `Melphaa` _script_ para configurar al dispositivo
 
