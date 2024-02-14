@@ -24,7 +24,7 @@ El _script_ adjunto se define para gestionar el ESP01 como un activador de un re
   "c": {
     "io": [                   // Configuración de los GPIO's
       [[0, 1], 2],            // Se seleccionan los GPIO 12 y 13 como pines de salida
-      [[3], 6, 1]             // Se seleccionan los GPIO 0 y 4 como pines de entrada con la resistencia de pull-up interna habilitada y señal invertida
+      [[3], 6, 1]             // Se selecciona el GPIO 3 como pin de entrada con la resistencia de pull-up interna habilitada y señal invertida
     ],
     "l": 1,                   // Se selecciona el GPIO 13 como led de estado del dispositivo
     "n": "device-hostname",   // Hostname del dispositivo
