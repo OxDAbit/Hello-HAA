@@ -5,14 +5,14 @@
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se realiza conectando el cable USB directamente a la PCB
 >
-> La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
+> La guía para _flashear_ el Wemos mini D1 que controlará el sensor es [Flasheo HAA](../docs/flash_haa.md)
 >
 > Carcasa impresa en 3D para poder ensamblar el sensor [Skadis LD2410](https://www.thingiverse.com/thing:6429958)
 
 ## Control del sensor de presencia humana
 
 El _script_ adjunto se define para gestionar un sensor de presencia humana.
-Para integrar el sensor con Homekit, se ha recurrido al uso de un Wemos mini D1, al cual se le ha conectado el pin de salida `out` del sensor **LD2410** al pin D2 (GPIO4)
+Para integrar el sensor con Homekit, se ha recurrido al uso de un `Wemos mini D1`, al cual se le ha conectado el pin de salida `out` del sensor **LD2410** al pin D2 (GPIO4) del Wemos.
 
 <img src="../images/ld2410.JPG" alt="LD2410 Pinout" width="450"/>
 
@@ -36,10 +36,10 @@ Para integrar el sensor con Homekit, se ha recurrido al uso de un Wemos mini D1,
     {
       "t": 6,                   // Configuración del accesorio como Sensor de Presencia
       "f0": [                   // Gestión del pin cuando el valor del sensor de presencia es OFF.
-        {"g": 4,"t": 0}
+        {"g": 4,"t": 0}         // 
       ],
-      "f1": [                   // Gestión del pin cuando el valor del sensor de presencia es OFF.
-        {"g": 4,"t": 1}
+      "f1": [                   // Gestión del pin cuando el valor del sensor de presencia es ON.
+        {"g": 4,"t": 1}         // 
       ]
     }
   ]
