@@ -7,6 +7,9 @@
 >
 > La guía para _flashear_ el dispositivo es [Flasheo HAA](../docs/flash_haa.md)
 
+> [!IMPORTANT]
+> Queda pendiente integrar la gestión del color seleccionado en la tira led
+
 ## Control de WLED desde HAA
 
 El _script_ adjunto se encarga de crear un accesorio del tipo _lightbulb_ que permite controlar, vía HTTP Response API, otro ESP con WLED.
