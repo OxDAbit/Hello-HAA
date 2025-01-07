@@ -26,7 +26,7 @@ El _script_ adjunto se define para gestionar una tira led, tanto el encendido y 
     "c": {
       "io": [                   // Configuración de los GPIO's
         [[4, 12, 14], 7],       // Se seleccionan los GPIO 4, 12 y 14 como pines de salida
-        [[0], 6, 1]             // Se seleccionan los GPIO 0 y 4 como pines de entrada con la resistencia de pull-up interna habilitada y señal invertida
+        [[0], 6, 1]             // Se selecciona el GPIO 0 como pin de entrada con la resistencia de pull-up interna habilitada y señal invertida
       ],
       "n": "device-hostname",   // Hostname del dispositivo
       "b": [[0, 5]],            // Se selecciona el GPIO 0 para activar el modo setup tras mantener pulsado el botón 8 segundos (opción 5)

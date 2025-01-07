@@ -1,6 +1,6 @@
 # Alarma de seguridad con Wemos mini D1
 
-<img src="https://templates.blakadder.com/assets/device_images/wemos_D1_Mini_ESP32.webp" alt="Wemos Mini D1" width="450"/>
+<img src="../images/wemos-d1.png" alt="Wemos D1 Mini ESP8266" width="450"/>
 
 > [!NOTE]
 > El conexionado del dispositivo para _flashearlo_ se realiza conectando el cable USB directamente a la PCB
@@ -37,7 +37,7 @@ El _script_ adjunto se define para gestionar una alarma de seguridad generando u
             "m": [            // Configuración de la notificación de servicio
               [
                 -1,           // La configuración se realizará contra el accesorio precedente, es decir, contra la alarma
-                1             // Se activa el modo "Fuera de cas"
+                1             // Se activa el modo "Fuera de casa"
               ]
             ]
           },
